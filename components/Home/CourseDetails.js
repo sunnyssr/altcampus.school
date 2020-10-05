@@ -1,29 +1,54 @@
 import React, { useState } from 'react';
+import validator from 'validator';
 
 function CourseDetails(props) {
 
   const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   async function handleClick(e) {
     e.preventDefault();
     console.log("The link was clicked.");
-    fetch('')
 
-    let response = await fetch('/api/curriculum', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8'
-      },
-      body: JSON.stringify({ email })
-    });
+    // if(!email || !validator.isEmail(email)) {
+    //   return setError('Please enter a valid email address.')
+    // }
+
+    try {
+      let response = await fetch("/api/curriculum", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      console.log(response);
+      if(response.status != 200) {
+        var respJson = await response.json();
+        console.log(respJson);
+        setError(respJson.msg);
+      } else {
+        setSuccess("We have sent you the curriculum. Please check your email. 😊")
+      }
+    } catch(err) {
+      console.log(err);
+    }  
 
   }
 
+  function handleEnter(e) {
+    var charCode = e.keyCode || e.charCode;
+    if(charCode == 13) {
+      handleClick(e);
+    }
+  }
+
   return (
-    <section className="py-24 bg-royal-blue-100" id="course-details">
+    <section className="pt-24 bg-royal-blue-100" id="course-details">
       <header className="text-center">
         <h2 className="font-bold text-5xl text-dark-blue-500">
-          Like we said <br />
           Exhaustive Course Content
         </h2>
       </header>
@@ -82,25 +107,40 @@ function CourseDetails(props) {
         </div>
       </div>
 
-      <div className="mx-auto px-16">
-        <h4 className="text-3xl text-green-theme-500 font-bold text-center">
+      <div className="mx-auto px-16 py-12 bg-green-theme-500">
+        <h4 className="text-3xl text-white font-bold text-center">
           Get the detailed curriculum & methodology delivered to your email
         </h4>
-        <div className="text-center sm:flex justify-center pt-6">
-          <input
-            id="email"
-            placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="appearance-none block w-2/5 px-3 py-3 border border-gray-300 rounded-sm placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-md sm:leading-5 text-dark-blue-400"
-          />
-          <button
-            onClick={handleClick}
-            className="px-6 ml-2 bg-green-theme-500 rounded-sm sm:text-md font-bold text-white font-mukta hover:bg-green-theme-600 "
-          >
-            Get it
-          </button>
-        </div>
+        {!success ? (
+          <div className="text-center sm:flex justify-center pt-6">
+            <input
+              id="email"
+              placeholder="Email"
+              onKeyUp={handleEnter}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setError("");
+              }}
+              className="appearance-none block w-2/5 px-3 py-3 border border-gray-300 rounded-sm placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-md sm:leading-5 text-dark-blue-400"
+            />
+            <button
+              onClick={handleClick}
+              className="px-6 ml-2 rounded-sm sm:text-md font-bold text-white font-mukta bg-green-theme-400 border-2 border-white hover:bg-green-theme-600 "
+            >
+              Get it
+            </button>
+          </div>
+        ) : (
+          <div>
+            <h5 className="flex items-center justify-center text-xl py-5 mt-2 text-center">
+              <img className="mr-4" src="/assets/media/check-pricing.svg" />
+              <span className=" bg-green-theme-200 font-lato text-green-theme-700 font-medium px-2 py-2 rounded-sm">
+                {success}
+              </span>
+            </h5>
+          </div>
+        )}
+        <p className="text-red-700 text-center">{error}</p>
       </div>
 
       {/* <div className='container mx-auto px-16'>
