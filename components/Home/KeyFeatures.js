@@ -116,6 +116,7 @@ function KeyFeatures(props) {
           </div>
         </div>
       </article>
+
       <article className="bg-dark-blue-100 py-24">
         <div className="mx-auto md:flex md:items-center px-16">
           <div className="md:order-1 mb-8 md:mb-0 md:w-2/5 text-center md:text-right">
@@ -178,6 +179,7 @@ function KeyFeatures(props) {
           </div>
         </div>
       </article>
+
     </>
   );
 }

@@ -11,6 +11,7 @@ import FAQ from "../components/Home/FAQ";
 import LetsTalk from "../components/Home/LetsTalk";
 import LayoutHome from "../components/Home/Layout";
 import Head from "next/head";
+import BatchInfo from "../components/Home/BatchInfo";
 
 function Home(props) {
 
@@ -32,6 +33,7 @@ function Home(props) {
         <main>
           <Hero />
           <KeyFeatures />
+          <BatchInfo />
           <CourseDetails />
           <Testimonials />
           <StartLearningCTA />

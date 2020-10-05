@@ -1,70 +1,109 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function CourseDetails(props) {
+
+  const [email, setEmail] = useState("");
+
+  async function handleClick(e) {
+    e.preventDefault();
+    console.log("The link was clicked.");
+    fetch('')
+
+    let response = await fetch('/api/curriculum', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8'
+      },
+      body: JSON.stringify({ email })
+    });
+
+  }
+
   return (
-    <section className='py-24 bg-royal-blue-100' id='course-details'>
-      <header className='text-center'>
-        <h2 className='font-bold text-5xl text-dark-blue-500'>
+    <section className="py-24 bg-royal-blue-100" id="course-details">
+      <header className="text-center">
+        <h2 className="font-bold text-5xl text-dark-blue-500">
           Like we said <br />
           Exhaustive Course Content
         </h2>
       </header>
-      <div className='text-center md:flex md:justify-between py-4 mb-16'>
-        <div className='py-6 md:py-12 course-icon relative md:w-1/4 '>
-          <div className='relative z-10 border-r border-dark-blue-100'>
-            <p className='text-6xl number-1 font-mukta'>14</p>
-            <p className='text-xl uppercase font-semibold text-dark-blue-600 font-lato'>
+      <div className="text-center md:flex md:justify-between py-4 mb-16">
+        <div className="py-6 md:py-12 course-icon relative md:w-1/4 ">
+          <div className="relative z-10 border-r border-dark-blue-100">
+            <p className="text-6xl number-1 font-mukta">14</p>
+            <p className="text-xl uppercase font-semibold text-dark-blue-600 font-lato">
               Modules
             </p>
           </div>
           <img
-            className='inline-block absolute'
-            src='/assets/media/modules.svg'
-            alt='Modules'
+            className="inline-block absolute"
+            src="/assets/media/modules.svg"
+            alt="Modules"
           />
         </div>
-        <div className='py-6 md:py-12 course-icon relative md:w-1/4'>
-          <div className='relative z-10 border-r border-dark-blue-100'>
-            <p className='text-6xl number-2 font-mukta'>80+</p>
-            <p className='text-xl uppercase font-semibold text-dark-blue-600 font-lato'>
+        <div className="py-6 md:py-12 course-icon relative md:w-1/4">
+          <div className="relative z-10 border-r border-dark-blue-100">
+            <p className="text-6xl number-2 font-mukta">80+</p>
+            <p className="text-xl uppercase font-semibold text-dark-blue-600 font-lato">
               Topics
             </p>
           </div>
           <img
-            className='inline-block absolute'
-            src='/assets/media/topic.svg'
-            alt='Topics'
+            className="inline-block absolute"
+            src="/assets/media/topic.svg"
+            alt="Topics"
           />
         </div>
-        <div className='py-6 md:py-12 course-icon relative md:w-1/4'>
-          <div className='relative z-10 border-r border-dark-blue-100'>
-            <p className='text-6xl number-3 font-mukta'>200+</p>
-            <p className='text-xl uppercase font-semibold text-dark-blue-600 font-lato'>
+        <div className="py-6 md:py-12 course-icon relative md:w-1/4">
+          <div className="relative z-10 border-r border-dark-blue-100">
+            <p className="text-6xl number-3 font-mukta">200+</p>
+            <p className="text-xl uppercase font-semibold text-dark-blue-600 font-lato">
               Exercises
             </p>
           </div>
           <img
-            className='inline-block absolute'
-            src='/assets/media/ex.svg'
-            alt='Exercises'
+            className="inline-block absolute"
+            src="/assets/media/ex.svg"
+            alt="Exercises"
           />
         </div>
-        <div className='py-6 md:py-12 course-icon relative md:w-1/4'>
-          <div className='relative z-10'>
-            <p className='text-6xl number-4 font-mukta'>40+</p>
-            <p className='text-xl uppercase font-semibold text-dark-blue-600 font-lato'>
+        <div className="py-6 md:py-12 course-icon relative md:w-1/4">
+          <div className="relative z-10">
+            <p className="text-6xl number-4 font-mukta">40+</p>
+            <p className="text-xl uppercase font-semibold text-dark-blue-600 font-lato">
               Projects
             </p>
           </div>
           <img
-            className='inline-block absolute'
-            src='/assets/media/project.svg'
-            alt='Projects'
+            className="inline-block absolute"
+            src="/assets/media/project.svg"
+            alt="Projects"
           />
         </div>
       </div>
 
-      <div className='container mx-auto px-16'>
+      <div className="mx-auto px-16">
+        <h4 className="text-3xl text-green-theme-500 font-bold text-center">
+          Get the detailed curriculum & methodology delivered to your email
+        </h4>
+        <div className="text-center sm:flex justify-center pt-6">
+          <input
+            id="email"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="appearance-none block w-2/5 px-3 py-3 border border-gray-300 rounded-sm placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-md sm:leading-5 text-dark-blue-400"
+          />
+          <button
+            onClick={handleClick}
+            className="px-6 ml-2 bg-green-theme-500 rounded-sm sm:text-md font-bold text-white font-mukta hover:bg-green-theme-600 "
+          >
+            Get it
+          </button>
+        </div>
+      </div>
+
+      {/* <div className='container mx-auto px-16'>
         <div className='p-8 bg-dark-blue-100'>
           <h3 className='uppercase text-3xl font-bold text-green-theme-700 mb-6'>
             UNIX & GIT
@@ -636,7 +675,7 @@ function CourseDetails(props) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
