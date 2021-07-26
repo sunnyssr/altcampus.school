@@ -18,6 +18,15 @@
   <url>
     <loc>https://altcampus.school/community/stories</loc>
   </url>
+  <url>
+    <loc>https://altcampus.school/community/web-development</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/curriculum</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/apply-for-emi</loc>
+  </url>
 
   <url>
     <loc
@@ -50,6 +59,11 @@
   <url>
     <loc
       >https://altcampus.school/community/posts/crud-operations-in-mongodb</loc
+    >
+  </url>
+  <url>
+    <loc
+      >https://altcampus.school/community/posts/do-you-need-a-cs-degree-to-become-a-software-developer</loc
     >
   </url>
   <url>
@@ -126,5 +140,114 @@
     <loc
       >https://altcampus.school/community/stories/learning-to-code-from-altcampus-and-finally-becoming-software-developer-komals-journey</loc
     >
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements</loc>
+  </url>
+
+  <url>
+    <loc>https://altcampus.school/placements/prasanth-chaduvula</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/vivek-baruah</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/harshaan-nihal-khan</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/abid-rahim</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/yash-joshi</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/deepak-sharma</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/koushik-shetty</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/kabir-nazir</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/akash-sharma</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/anshu-saurabh</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/akshat</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/sudarshan-p.-shinde</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/mayank-agnihotri</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/raghuram-bachu</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/sachin-tiwari</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/akshay-pradeep</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/ashish-sharma</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/abhishek-kumar</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/shivam-chahar</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/apoorv-tiwari</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/shashank-bhatotia</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/shreyansh-gupta</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/mohd-anas-ansari</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/devika-misra</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/ayushman-s-parasar</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/ashwani-goswami</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/bimlendu-kumar</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/abhishek-shastri</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/komal-raj</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/ashik-raj</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/ruchi-kharwar</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/elton-castelino</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/sourav-kumar</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/bhavishya-negi</loc>
+  </url>
+  <url>
+    <loc>https://altcampus.school/placements/bharat-patodi</loc>
   </url>
 </urlset>
